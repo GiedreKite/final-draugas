@@ -22,4 +22,4 @@ app.use((err, req, res, next) => {
 
 
 app.listen(port, ()=> 
-console.log('Turizmo serveris : http://localhost:'+port));
+console.log('Draugo serveris : http://localhost:'+port));
