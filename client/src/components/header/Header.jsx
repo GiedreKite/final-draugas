@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import draugas from './img/draugas.png';
 import { Link } from 'react-router-dom';
+import '../../components/bootstrap.min.css';
 import style from './Header.module.css';
 
 
