@@ -8,7 +8,7 @@ import {
   BrowserRouter as Router, Routes, Route
 } from 'react-router-dom'
 import { MainPage } from './components/mainPage/MainPage.jsx'
-import { ForthPage } from './components/forthPage/ForthPage.jsx'
+import { ForthPage } from './components/checkOut/ForthPage.jsx'
 import { Home } from './pages/Home.jsx'
 
 

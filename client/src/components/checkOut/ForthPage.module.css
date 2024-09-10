@@ -1,0 +1,9 @@
+.form-label {
+   border: 1px solid grey!important;
+}
+
+.form-label:focus,.form-label:hover {
+    color: RGBA(var(--bs-emphasis-color-rgb),var(--bs-link-opacity,.75))!important;
+    -webkit-text-decoration-color: RGBA(var(--bs-emphasis-color-rgb),var(--bs-link-underline-opacity,0.75))!important;
+    text-decoration-color: RGBA(var(--bs-emphasis-color-rgb),var(--bs-link-underline-opacity,0.75))!important
+}
