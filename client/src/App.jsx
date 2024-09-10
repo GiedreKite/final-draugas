@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom'
 import { MainPage } from './components/mainPage/MainPage.jsx'
 import { ForthPage } from './components/forthPage/ForthPage.jsx'
+import { Home } from './pages/Home.jsx'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
     <Header />
     <Routes>
       <Route className="appDraugas" path="/draugas">
+      <Route className="home" path="home" element={<Home/>}></Route>
         <Route className="mainPage" path="main" element={<MainPage/>}></Route>
         <Route className="firstPage" path="first" element={<FirstPage/>}></Route>
         <Route className="secondPage" path="second" element={<SecondPage/>}></Route>
