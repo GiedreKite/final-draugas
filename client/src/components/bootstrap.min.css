@@ -2,7 +2,7 @@
   @media (prefers-color-scheme: light) {
     :root {
       color: #213547;
-      background-color: #ffffff;
+      background-color: #316e7f6e;
     }
     a:hover {
       color: #747bff;
@@ -13464,4 +13464,12 @@
           display: none!important
       }
   }
+
+  
+.containerHeder {
+    position: sticky!important;
+    top: 0px;
+    z-index: 1;
+    background-color: rgba(0, 255, 255, 0.28);
+}
   
