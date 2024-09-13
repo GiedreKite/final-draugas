@@ -7,7 +7,7 @@ import { ForthPage } from "../../components/checkOut/ForthPage";
 
 
 
-export function ShoppingCart() {
+export function ShoppingChart() {
     return (
         <>
             <Header />

@@ -3,7 +3,7 @@ import draugas from './img/draugas.png';
 import { Link } from 'react-router-dom';
 import '../../components/bootstrap.min.css';
 import style from './Header.module.css';
-import { motion } from "framer-motion";
+
 // import juda from'https://framer.com/m/Juda-svuW.js@zNg8x80zLQ14nKzrkR4P'
 
 
@@ -34,7 +34,7 @@ import { motion } from "framer-motion";
                     </a>
                 </div>
                 <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li>
+                    <li>
                         <a href="/draugas/home" className="nav-link px-2 link-secondary">Pagringinis</a>
                     </li>
                     <li>
@@ -43,7 +43,7 @@ import { motion } from "framer-motion";
 
 
                     <li>
-                        <a href="/draugas/registion" className="nav-link px-2">Registracija</a>
+                        <a href="/draugas/regin" className="nav-link px-2">Registracija</a>
                     </li>
                     <li>
                         <a href="/draugas/login" className="nav-link px-2">Prisijungimas</a>
@@ -57,7 +57,15 @@ import { motion } from "framer-motion";
                     <li>
                         <a href="/draugas/servisesList" className="nav-link px-2">Paslaugų sąrašas</a>
                     </li>
-               
+                    <li>
+                        <a href="/draugas/users" className="nav-link px-2">Vartotojų sąrašas ADMIN</a>
+                    </li>
+                    <li>
+                        <a href="/draugas/list" className="nav-link px-2">Paslaugų sąrašas ADMIN</a>
+                    </li>
+                    <li>
+                        <a href="/draugas/createList" className="nav-link px-2">Sukurti paslaugą ADMIN</a>
+                    </li>
                 </ul>
 
                 <div className="col-md-3 text-end">

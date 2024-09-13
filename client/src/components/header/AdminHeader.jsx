@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import draugas from './img/draugas.png';
-import { Link } from 'react-router-dom';
-import '../../components/bootstrap.min.css';
-import style from './Header.module.css';
-import { motion } from "framer-motion";
+import style from './AdminHeader.module.css';
+
+
 // import juda from'https://framer.com/m/Juda-svuW.js@zNg8x80zLQ14nKzrkR4P'
 
 
@@ -22,10 +21,7 @@ import { motion } from "framer-motion";
     return <>
    
 
-
-
-
-<div className="containerHeder">
+<div className="containerAdminHeder">
             <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
                 <div className="col-md-3 mb-2 mb-md-0">
                     <a href="/" className="d-inline-flex link-body-emphasis text-decoration-none">

@@ -22,9 +22,9 @@
     height: 23rem;
   }
 
-.containerHeder {
+.containerAdminHeder {
     position: sticky!important;
     top: 0px;
     z-index: 1;
-    background-color: aqua;
+    background-color: white!important;
 }

@@ -1,4 +1,9 @@
-export function Registracion(props) {
+import { useState } from "react";
+import plus from './img/plus.png';
+import x from './img/x.png';
+
+export function Registration(props) {
+    const [show00, setShow00] = useState(false);
 
         const [name, setName] = useState('');
         const [surname, setSurname] = useState('');
@@ -18,7 +23,7 @@ export function Registracion(props) {
             }
         }
         
-        const [show00, setShow00] = useState(false);
+       
         function hide00() {
             if(show00===false) {
                 setShow00(true)
