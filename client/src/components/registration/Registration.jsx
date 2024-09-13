@@ -2,7 +2,7 @@ import { useState } from "react";
 import plus from './img/plus.png';
 import x from './img/x.png';
 
-export function Registration(props) {
+export default function Registration(props) {
     const [show00, setShow00] = useState(false);
 
         const [name, setName] = useState('');
@@ -35,6 +35,8 @@ export function Registration(props) {
 
     
     return <>
+
+    
     <h2>Norintiems užsiregistruoti: 
         <button onClick={() => hide00()} >Registracijos forma</button>
     </h2>
