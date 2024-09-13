@@ -11,7 +11,7 @@ import { About } from './pages/About.jsx'
 
 import { UserInfo } from './pages/users/UserInfo.jsx'
 import { ShoppingChart } from './pages/users/ShoppingChart.jsx'
-import { ServicesList } from './pages/users/servicesList.jsx'
+
 import { Users } from './pages/admin/Users.jsx'
 import { List } from './pages/admin/List.jsx'
 import { CreateList } from './pages/admin/CreateList.jsx'
@@ -42,7 +42,7 @@ function App() {
       <Route className="login" path="login" element={<Login/>}></Route>
       <Route className="userInfo" path="userInfo" element={<UserInfo/>}></Route>
       <Route className="shoppingChart" path="shoppingChart" element={<ShoppingChart/>}></Route>
-      <Route className="servicesList" path="servicesList" element={<ServicesList/>}></Route>
+      <Route className="servicesList" path="servicesList" element={<S/>}></Route>
       <Route className="users" path="users" element={<Users/>}></Route>
       <Route className="list" path="list" element={<List/>}></Route>
       <Route className="createList" path="createList" element={<CreateList/>}></Route>

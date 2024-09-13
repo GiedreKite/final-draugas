@@ -86,7 +86,7 @@ import x from './img/x.png';
               <div className="col-md-7">
                 <h2 className="featurette-heading fw-normal lh-1"> „Draugas Draugui Draugas“ - <span className="text-body-secondary">Asmeninis Laikas ir Palaikymas.</span></h2>
                 <div  className={style.questionContainer}>
-                        <button onClick={() => hide0()} className={style.question}>„Draugas Draugui“ – tai asmeninė paslauga, skirta tiems, kurie ieško kokybiško laiko. Kaip jūsų asmeninė draugė, aš siūlau Jums unikalią patirtį, apimančią pramogas, bendravimą ir emocinį palaikymą. 
+                        <button onClick={() => hide0()} className={style.question}>„Draugas Draugui“ – tai asmeninė paslauga, skirta tiems, kurie ieško kokybiško laiko. Kaip Jūsų asmeninė draugė, aš siūlau Jums unikalią patirtį, apimančią pramogas, bendravimą ir emocinį palaikymą. 
                             <img style={show0===true ? (false ? {display: "flex"}: {display: "none"} ) : {}} className={style.questionImg} src={plus} alt="plus" />
                             <img style={show0===false ? (true ? {display: "none"}: {display: "flex"} ) : {}} className={style.questionImg} src={x} alt="x" />
                         </button>
@@ -108,7 +108,7 @@ import x from './img/x.png';
                             <img style={show1===true ? (false ? {display: "flex"}: {display: "none"} ) : {}} className={style.questionImg} src={plus} alt="plus" />
                             <img style={show1===false ? (true ? {display: "none"}: {display: "flex"} ) : {}} className={style.questionImg} src={x} alt="x" />
                         </button>
-                        <p style={show1===true ?  {display: "flex"}: {display: "none"} } className={style.answer}>Kai lyja, sninga, pučia ar saulė šviečia – jūsų laikas ir emocinė gerovė yra svarbiausi. Aš siūlau unikalią paslaugą, kuri apima ne tik bendrą laiką kartu, bet ir pramogas bei emocinį palaikymą, atsižvelgiant į jūsų poreikius ir nuotaiką. Kartu galime mėgautis įvairiomis veiklomis – nuo ramiai leidžiamo laiko gamtoje su kavos puodeliu iki įdomių kūrybinių dirbtuvių ar kultūrinių renginių, kurie praturtins jūsų kasdienybę ir suteiks džiaugsmo. Taip pat aš visada čia, kad išklausyčiau, suteikčiau palaikymą ir patarimus, kad ir kokie būtų iššūkiai ar džiaugsmo akimirkos. Kiekvieną kartą, kai praleidžiame laiką kartu, aš siekiu ne tik sukurti malonias akimirkas, bet ir būti šalia, kai Jums reikia emocinio palaikymo ir tikro draugiškumo.</p>
+                        <p style={show1===true ?  {display: "flex"}: {display: "none"} } className={style.answer}>Kai lyja, sninga, pučia ar saulė šviečia – Jūsų laikas ir emocinė gerovė yra svarbiausi. Aš siūlau unikalią paslaugą, kuri apima ne tik bendrą laiką kartu, bet ir pramogas bei emocinį palaikymą, atsižvelgiant į Jūsų poreikius ir nuotaiką. Kartu galime mėgautis įvairiomis veiklomis – nuo ramiai leidžiamo laiko gamtoje su kavos puodeliu iki įdomių kūrybinių dirbtuvių ar kultūrinių renginių, kurie praturtins Jūsų kasdienybę ir suteiks džiaugsmo. Taip pat aš visada čia, kad išklausyčiau, suteikčiau palaikymą ir patarimus, kad ir kokie būtų iššūkiai ar džiaugsmo akimirkos. Kiekvieną kartą, kai praleidžiame laiką kartu, aš siekiu ne tik sukurti malonias akimirkas, bet ir būti šalia, kai Jums reikia emocinio palaikymo ir tikro draugiškumo.</p>
                     </div>
               </div>
               <div className="col-md-5 order-md-1">
@@ -120,13 +120,15 @@ import x from './img/x.png';
             
             <div className="row featurette">
               <div className="col-md-7">
-                <h2 className="featurette-heading fw-normal lh-1">And lastly, this one. <span className="text-body-secondary">Checkmate.</span></h2>
+                <h2 className="featurette-heading fw-normal lh-1">Ir kodėl verta pasirinkti: <span className="text-body-secondary">"Draugas Draugui Draugas?</span></h2>
                 <div className={style.questionContainer}>
-                        <button onClick={() => hide2()} className={style.question}>Kur?
+                        <button onClick={() => hide2()} className={style.question}> Nes „Draugas Draugui Draugas“ siūlo daugiau nei tiesiog paslaugą – tai asmeninis ryšys, kuris praturtina Jūsų gyvenimą. Kiekviena akimirka, kurią praleidžiame kartu, yra pritaikyta Jūsų poreikiams ir pageidavimams, kad galėtumėte jaustis ypatingi.
+
+
                             <img style={show2===true ? (false ? {display: "flex"}: {display: "none"} ) : {}} className={style.questionImg} src={plus} alt="plus" />
                             <img style={show2===false ? (true ? {display: "none"}: {display: "flex"} ) : {}} className={style.questionImg} src={x} alt="x" />
                         </button>
-                        <p style={show2===true ?  {display: "flex"}: {display: "none"} } className={style.answer}>Klaipėda, tačiau galima pakeisti ir vietą.</p>
+                        <p style={show2===true ?  {display: "flex"}: {display: "none"} } className={style.answer}>Ši paslauga pasižymi lankstumu ir individualiu požiūriu: galėsite pasirinkti veiklas ir bendro laiko planus, kurie geriausiai atitinka Jūsų nuotaiką ir interesus. Pirmasis susitikimas yra nemokamas, kad galėtumėte išbandyti, kaip mūsų paslauga atitinka Jūsų lūkesčius ir poreikius. Pasirinkę „Draugas Draugui Draugas“, Jūs ne tik gausite galimybę mėgautis pramogomis ir veiklomis, bet ir rasite tikrą draugą, kuris bus šalia tiek džiaugsmo, tiek iššūkių akimirkomis. Aš esu čia, kad suteikčiau Jums nuoširdų palaikymą, skatinti Jūsų gerovę ir padėsiu kurti prasmingus, laimingus gyvenimo momentus.</p>
                     </div>
               </div>
               <div className="col-md-5">
@@ -137,25 +139,7 @@ import x from './img/x.png';
             <hr className="featurette-divider"/>
             
             
-            
-                   
-                    {/* <h2>Užduodami klausimai</h2>
-                
-                   <section className={style.container}>
-
-                
-
-                
-
-                
-                    <div className={style.questionContainer}>
-                        <button onClick={() => hide3()} className={style.question}>Kada priimami užsakymai?
-                            <img style={show3===true ? (false ? {display: "flex"}: {display: "none"} ) : {}} className={style.questionImg} src={plus} alt="plus" />
-                            <img style={show3===false ? (true ? {display: "none"}: {display: "flex"} ) : {}} className={style.questionImg} src={x} alt="x" />
-                        </button>
-                        <p style={show3===true ?  {display: "flex"}: {display: "none"} } className={style.answer}>Užsakymus priimu pagal užimtumą. Nesidrovėkite, jei iki įvykio liko trys valandos Klaipėdoje.</p>
-                    </div>
-                   </section> */}
+        
 
      
     
