@@ -1,48 +1,127 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import style from './LoginOn.module.css'
 
-    export function LoginOn() {
-        
-        return <>
+function LoginOn() {
+    const initialValues = {
+        username: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+    };
+    const [formValues, setFormValues] = useState(initialValues);
+    const [formErrors, setFormErrors] = useState({});
+    const [isSubmit, setIsSubmit] = useState(false);
 
-<div className="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog" id="modalSignin">
-  <div className="modal-dialog" role="document">
-    <div className="modal-content rounded-4 shadow">
-      <div className="modal-header p-5 pb-4 border-bottom-0">
-        <h1 className="fw-bold mb-0 fs-2">Sign up for free</h1>
-        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormValues({ ...formValues, [name]: value });
+    };
 
-      <div className="modal-body p-5 pt-0">
-        <form className="">
-          <div className="form-floating mb-3">
-            <input type="email" className="form-control rounded-3" id="floatingInput" placeholder="name@example.com"/>
-            <label for="floatingInput">Email address</label>
-          </div>
-          <div className="form-floating mb-3">
-            <input type="password" className="form-control rounded-3" id="floatingPassword" placeholder="Password"/>
-            <label for="floatingPassword">Password</label>
-          </div>
-          <button className="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
-          <small className="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
-          <hr className="my-4"/>
-          <h2 className="fs-5 fw-bold mb-3">Or use a third-party</h2>
-          <button className="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
-            <svg className="bi me-1" width="16" height="16"><use xlink:href="#twitter"></use></svg>
-            Sign up with Twitter
-          </button>
-          <button className="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
-            <svg className="bi me-1" width="16" height="16"><use xlink:href="#facebook"></use></svg>
-            Sign up with Facebook
-          </button>
-          <button className="w-100 py-2 mb-2 btn btn-outline-secondary rounded-3" type="submit">
-            <svg className="bi me-1" width="16" height="16"><use xlink:href="#github"></use></svg>
-            Sign up with GitHub
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-        
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setFormErrors(validate(formValues));
+        setIsSubmit(true);
+    };
+
+    useEffect(() => {
+        console.log(formErrors);
+        if (Object.keys(formErrors).length === 0 && isSubmit) {
+            console.log(formValues);
+        }
+    }, [formErrors, formValues, isSubmit]);
+    const validate = (values) => {
+        const errors = {};
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+        if (!values.username) {
+            errors.username = "Username is required!";
+        }
+        if (!values.email) {
+            errors.email = "Email is required!";
+        } else if (!regex.test(values.email)) {
+            errors.email = "This is not a valid email format!";
+        }
+        if (!values.password) {
+            errors.password = "Password is required";
+        } else if (values.password.length < 4) {
+            errors.password = "Password must be more than 4 characters";
+        } else if (values.password.length > 10) {
+            errors.password = "Password cannot exceed more than 10 characters";
+        }
+        if (values.password !== values.confirmPassword) {
+            errors.confirmPassword = "Those passwords didn’t match. Try again.";
+        }
+        return errors;
+    };
+
+    return (
+        <>
+            <div className="bgImg"></div>
+            <div className={style.container}>
+                {Object.keys(formErrors).length === 0 && isSubmit ? (
+                    <div className="ui message success">
+                        Signed in successfully
+                    </div>
+                ) : (
+                    console.log("Entered Details", formValues)
+                )}
+
+                <form onSubmit={handleSubmit}>
+                    <h1>Sign Up</h1>
+                    <div className="ui divider"></div>
+                    <div className="ui form">
+                        <div className="field">
+                            <label>Username</label>
+                            <input
+                                type="text"
+                                name="username"
+                                placeholder="Choose a username"
+                                value={formValues.username}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <p>{formErrors.username}</p>
+                        <div className="field">
+                            <label>Email</label>
+                            <input
+                                type="text"
+                                name="email"
+                                placeholder="Email"
+                                value={formValues.email}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <p>{formErrors.email}</p>
+                        <div className="field">
+                            <label>Password</label>
+                            <input
+                                type="password"
+                                name="password"
+                                placeholder="Password"
+                                value={formValues.password}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <p>{formErrors.password}</p>
+                        <div className="field">
+                            <label>Confirm Password</label>
+                            <input
+                                type="password"
+                                name="confirmPassword"
+                                placeholder="Confirm password"
+                                value={formValues.confirmPassword}
+                                onChange={handleChange}
+                            />
+                        </div>
+                        <p>{formErrors.confirmPassword}</p>
+                        <button className="fluid ui button blue">Submit</button>
+                    </div>
+                </form>
+                <div className="text">
+                    Already have an account? <span>Login</span>
+                </div>
+            </div>{" "}
         </>
-    }
+    );
+}
+
+export default LoginOn;

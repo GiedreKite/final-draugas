@@ -33,24 +33,6 @@ import style from './Footer.module.css';
                 </ul>
 
 
-                <nav>
-                <Link to="/draugas/main">
-                    <button>Pagrindinis</button>
-                </Link>
-                <Link to="/draugas/first">
-                    <button>First</button>
-                </Link>
-                <Link to="/draugas/second">
-                    <button>Second</button>
-                </Link>
-                <Link to="/draugas/third">
-                    <button>Third</button>
-                </Link>
-                <Link to="/draugas/forth">
-                    <button>Forth</button>
-                </Link>
-
-            </nav>
             </footer>
         </div>
     );
