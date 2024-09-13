@@ -18,17 +18,21 @@ import { CreateList } from './pages/admin/CreateList.jsx'
 import { Login } from './pages/Login.jsx'
 import { Regin } from './pages/Regin.jsx'
 import { Logo } from './components/header/Logo.jsx'
+import { Header } from './components/header/Header.jsx'
+import { AdminHeader } from './components/header/AdminHeader.jsx'
 
 
 function App() {
   const [count, setCount] = useState(0)
+  const [user, setUser] =useState(false)
 
     // useEffect(()=>{
     //     document.getElementById('body').style.backgroundImage =  `url("http://localhost:5174/background.avif")`;}, []);
  
   return (
     <>
-  <Logo/>
+    <AdminHeader />
+  {/* <{{user}===true ? (true ? {Header}: {Header} ) : {AdminHeader}} /> */}
     <Routes>
       <Route className="appDraugas" path="/draugas">
       <Route className="presentation" path="presentation" element={<Presentation/>}></Route> 
