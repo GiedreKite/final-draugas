@@ -20,15 +20,15 @@ import { Regin } from './pages/Regin.jsx'
 import { Logo } from './components/header/Logo.jsx'
 import { Header } from './components/header/Header.jsx'
 import { AdminHeader } from './components/header/AdminHeader.jsx'
+import ServicesList from './pages/users/servicesList.jsx'
+
 
 
 function App() {
   const [count, setCount] = useState(0)
   const [user, setUser] =useState(false)
 
-    // useEffect(()=>{
-    //     document.getElementById('body').style.backgroundImage =  `url("http://localhost:5174/background.avif")`;}, []);
- 
+
   return (
     <>
     <AdminHeader />
@@ -42,7 +42,7 @@ function App() {
       <Route className="login" path="login" element={<Login/>}></Route>
       <Route className="userInfo" path="userInfo" element={<UserInfo/>}></Route>
       <Route className="shoppingChart" path="shoppingChart" element={<ShoppingChart/>}></Route>
-      <Route className="servicesList" path="servicesList" element={<S/>}></Route>
+      <Route className="servicesList" path="servicesList" element={<ServicesList />}></Route>
       <Route className="users" path="users" element={<Users/>}></Route>
       <Route className="list" path="list" element={<List/>}></Route>
       <Route className="createList" path="createList" element={<CreateList/>}></Route>

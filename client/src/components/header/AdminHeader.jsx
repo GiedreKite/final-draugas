@@ -39,7 +39,7 @@ import { Link } from 'react-router-dom';
 
 
                     <li>
-                        <a href="/draugas/registion" className="nav-link px-2">Registracija</a>
+                        <a href="/draugas/regin" className="nav-link px-2">Registracija</a>
                     </li>
                     <li>
                         <a href="/draugas/login" className="nav-link px-2">Prisijungimas</a>
@@ -51,7 +51,7 @@ import { Link } from 'react-router-dom';
                         <a href="/draugas/shoppingChart" className="nav-link px-2">Vartotojo krepšelis</a>
                     </li>
                     <li>
-                        <a href="/draugas/servisesList" className="nav-link px-2">Paslaugų sąrašas</a>
+                        <a href="/draugas/servicesList" className="nav-link px-2">Paslaugų sąrašas</a>
                     </li>
                     <li>
                         <a href="/draugas/users" className="nav-link px-2">Vartotojų sąrašas ADMIN</a>
